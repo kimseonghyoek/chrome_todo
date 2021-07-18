@@ -6,7 +6,7 @@ function clock() {
     const hours = date.getHours();
     const minutes = date.getMinutes();
 
-    todayTime.innerText = `${hours} : ${minutes}`; 
+    todayTime.innerText = `${hours} : ${minutes < 10 ? `0${minutes}` : minutes}`;
 }
 
 function init() {
