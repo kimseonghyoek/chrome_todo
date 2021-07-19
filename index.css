@@ -29,6 +29,29 @@ html body {
     background-size: cover;
 }
 
+#ment {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+}
+
 h3 {
+    margin: 1px;
+}
+
+input {
+    font-size: 25px;
+    margin: 30px;
+    border-radius: 20px;
+    display: inline-block;
+    border: none;
+    border-right: 0px;
+    border-top: 0px;
+    border-left: 0px;
+    width: 600px;
+    height: 50px;
+}
+
+span {
     color: #fff;
-} 
+}
