@@ -49,6 +49,7 @@ function submit(event)  {
         text: newToDo
     }
     printToDo(newTodoObj);
+    toDoInput.value = '';
 }
 
 todoForm.addEventListener("submit", submit);
