@@ -13,8 +13,10 @@ function clock() {
 
         if(hours == '19', '20', '21', '22', '23', '0', '1', '2', '3', '4', '5', '6') {
             ment.innerHTML = '<h3>Good Evening !!! </h3>';
-        } else if (hours == '7', '8', '9') {
+        } else if (hours == '7', '8', '9', '10', '11') {
             ment.innerHTML = '<h3>Good Morning !!! </h3>';
+        } else if (hours == '12', '13', '14', '15', '16', '17', '18') {
+            ment.innerHTML = '<h3>Good Afternoon !!! </h3>'
         }
     }
 
