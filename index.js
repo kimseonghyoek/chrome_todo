@@ -46,14 +46,14 @@ function printToDo(createToDo) {
     li.appendChild(button);
     todoList.appendChild(li);
 
-    button.onclick(delteTodo());
+    // button.onclick(delteTodo());
 }
 
-function delteTodo(event) {
-    const li = event.target.parentElement;
-    li.remove();
-    todos = todos.filter((todo) => todo.id !== parseInt(li.id));
-}
+// function delteTodo(event) {
+//     const li = event.target.parentElement;
+//     li.remove();
+//     todos = todos.filter((todo) => todo.id !== parseInt(li.id));
+// }
 
 function submit(event)  {
     event.preventDefault();
