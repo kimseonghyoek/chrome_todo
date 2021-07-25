@@ -47,6 +47,7 @@ function printToDo(createToDo) {
     todoList.appendChild(li);
 
     // button.onclick(delteTodo());
+    toDoInput.value = '';
 }
 
 // function delteTodo(event) {
@@ -59,7 +60,6 @@ function submit(event)  {
     event.preventDefault();
 
     const newToDo = toDoInput.value;
-
     const newTodoObj = {
         text: newToDo,
         id: Date.now()
@@ -72,7 +72,7 @@ function submit(event)  {
     }
 
     printToDo(newTodoObj);
-    toDoInput.value = '';
+
 
     function noEnter(e) {
         if(todoList.childElementCount > 9) {
