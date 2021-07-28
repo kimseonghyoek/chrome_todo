@@ -51,7 +51,7 @@ function printToDo(createToDo) {
 function deleteToDo(event) {
     const list = event.target.parentElement;
     list.remove();
-    todos = todos.filter((toDo) => toDo.id !== parseInt(list.id));
+    todos = todos.splice((todo) => todo.id !== parseInt(list.id));
  }
 
 function submit(event)  {
