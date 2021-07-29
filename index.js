@@ -40,18 +40,29 @@ function printToDo(createToDo) {
     const li = document.createElement('li');
     const span = document.createElement('span');
     const button = document.createElement('button');
+    li.id = createToDo.id;
     button.innerText = '❌';
     span.innerText = createToDo.text; 
     li.appendChild(span);
     li.appendChild(button);
     todoList.appendChild(li);
-    button.addEventListener('click', deleteToDo)
+    button.addEventListener('click', function() {
+        console.log('1111111')
+        deleteToDo(createToDo.id)
+    })
 }
 
-function deleteToDo(event) {
-    const list = event.target.parentElement;
-    list.remove();
-    todos = todos.splice((todo) => todo.id !== parseInt(list.id));
+function deleteToDo(todoid) {
+    document.getElementById(todoid).remove();
+    let list;
+    for(i = 0; i < todos.length; i++) {
+        if(todoid == todos[i].id) {
+          list = i;
+          break;
+        }
+    }
+    todos = todos.splice(list, 1);
+    console.log(todos);
  }
 
 function submit(event)  {
@@ -61,7 +72,7 @@ function submit(event)  {
 
     const newTodoObj = {
         text: newToDo,
-        id: Date.now(),
+        id: '1231242'
 
     }
     todos.push(newTodoObj);
