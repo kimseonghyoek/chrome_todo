@@ -36,7 +36,7 @@ const todoList = document.getElementById('todo-list');
 
 let todos = [];
 
-function printToDo(createToDo) {
+function printToDo(createToDo) { 
     const li = document.createElement('li');
     const span = document.createElement('span');
     const button = document.createElement('button');
@@ -47,7 +47,6 @@ function printToDo(createToDo) {
     li.appendChild(button);
     todoList.appendChild(li);
     button.addEventListener('click', function() {
-        console.log('1111111')
         deleteToDo(createToDo.id)
     })
 }
@@ -62,7 +61,7 @@ function deleteToDo(todoid) {
         }
     }
     todos = todos.splice(list, 1);
-    console.log(todos);
+    console.log(todos.length);
  }
 
 function submit(event)  {
@@ -91,7 +90,7 @@ function submit(event)  {
             alert('10개 이상은 입력 금지입니다.');
             toDoInput.disabled = true;
         }
-        if(todoList.childElementCount < 10) {
+        if(todos.length < 9) {
             toDoInput.disabled = false;
         }
     }
